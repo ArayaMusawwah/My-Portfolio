@@ -3,13 +3,15 @@ import { forwardRef } from "react"
 interface Props {
   children: React.ReactNode
   className?: string
+  center?: boolean
+  imageClass?: string
 }
 
 const MainLayout = forwardRef<HTMLDivElement, Props>(
-  ({ children, className }, ref) => {
+  ({ children, className, center, imageClass }, ref) => {
     return (
       <div
-        className={`min-h-screen overflow-x-hidden bg-gray-950 px-[7%] py-10 text-slate-200 transition-all ${className}`}
+        className={`relative min-h-screen overflow-x-hidden bg-gray-950 text-slate-200 transition-all ${imageClass} absolute inset-0 flex bg-cover bg-center bg-no-repeat px-[7%] py-10 transition-all ${center && "items-center justify-center"} ${className} `}
         ref={ref}
       >
         {children}

@@ -40,7 +40,7 @@ const LogoNavbar: React.FC<Props> = ({
 
   return (
     <header
-      className={`fixed left-1/2 z-[999] mt-12 flex w-fit -translate-x-1/2 cursor-pointer items-center justify-center`}
+      className={`fixed left-1/2 z-[999] mt-6 flex w-fit -translate-x-1/2 cursor-pointer items-center justify-center`}
       ref={headerRef}
     >
       <img
@@ -50,7 +50,7 @@ const LogoNavbar: React.FC<Props> = ({
       />
 
       <div
-        className={`absolute flex h-[6.5rem] items-center justify-center  space-y-2 rounded-md border border-white bg-white/10 backdrop-blur-sm transition-all duration-[600ms] ease-[cubic-bezier(0.380,0.365,0.025,0.785)] ${isActive ? "mt-48 h-[5rem] w-[26rem]" : "w-[6.5rem]"}`}
+        className={`absolute flex items-center justify-center  space-y-2 rounded-md border border-white bg-white/10 backdrop-blur-sm transition-all duration-[600ms] ease-[cubic-bezier(0.380,0.365,0.025,0.785)] ${isActive ? "mt-48 h-[4.5rem] w-[26rem]" : "h-[6.5rem] w-[6.5rem]"}`}
       >
         <Navigation
           isActive={isActive}

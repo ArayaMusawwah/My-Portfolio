@@ -18,7 +18,7 @@ const Navigation: React.FC<Props> = ({
   const scrollToRef = (ref: React.RefObject<HTMLElement>) => {
     ref.current?.scrollIntoView({
       behavior: "smooth",
-      block: "nearest",
+      block: "end",
       inline: "start"
     })
   }

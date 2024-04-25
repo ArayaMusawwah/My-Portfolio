@@ -4,7 +4,8 @@ import MainLayout from "../layouts/MainLayout"
 const ContactSection = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <MainLayout
-      className="grid min-h-screen place-items-center bg-[url('/3.jpg')] bg-cover bg-center"
+      imageClass="bg-[url('/3.jpg')]"
+      center={false}
       ref={ref}
       {...props}
     >

@@ -15,7 +15,7 @@ const App: React.FC = () => {
   const socialRef = useRef(null)
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-hidden">
       <LogoNavbar
         homeRef={homeRef}
         aboutRef={aboutRef}
@@ -23,7 +23,7 @@ const App: React.FC = () => {
         socialRef={socialRef}
       />
       <div
-        className={`overflow-x-hidden transition-all duration-700 ease-in-out ${window.scrollY > 0 && isActive ? "origin-center scale-105 blur-md" : "scale-100"}`}
+        className={`transition-all duration-700 ease-in-out ${window.scrollY > 0 && isActive ? "origin-center scale-105 blur-md" : "scale-100"}`}
       >
         <HomeSection ref={homeRef} />
         <AboutSection ref={aboutRef} />

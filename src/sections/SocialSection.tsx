@@ -4,7 +4,8 @@ import MainLayout from "../layouts/MainLayout"
 const SocialSection = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <MainLayout
-      className={`grid min-h-screen place-items-center bg-[url('/2.jpg')] bg-cover bg-center`}
+      imageClass="bg-[url('/2.jpg')]"
+      center={true}
       {...props}
       ref={ref}
     >
