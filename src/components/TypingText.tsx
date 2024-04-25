@@ -13,14 +13,14 @@ const TypingText: React.FC = () => {
       <TypeAnimation
         sequence={[
           "Muhammad Iqbal Ramadhan",
-          1000,
+          2000,
           "Araya Musawwah",
-          500,
+          1000,
           "",
           0
         ]}
         repeat={Infinity}
-        className="mt-4 block w-fit bg-gradient-to-tr from-[#bc5f5c] from-20% to-[#3300ff] to-80% bg-clip-text text-6xl font-bold text-transparent "
+        className="mt-4 block w-fit bg-gradient-to-tr from-[#bc5f5c] from-20% to-[#7756fc] to-80% bg-clip-text text-6xl font-bold text-transparent "
       />
       <TypeAnimation
         sequence={[

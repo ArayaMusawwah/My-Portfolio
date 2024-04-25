@@ -5,17 +5,20 @@ import ContactSection from "./sections/ContactSection"
 import SocialSection from "./sections/SocialSection"
 import LogoNavbar from "./sections/LogoNavbar"
 import { ActiveContext } from "./contexts/ActiveContext"
+import ProgressBar from "./components/ProgressBar"
 
 const App: React.FC = () => {
   const { isActive } = useContext(ActiveContext)
 
-  const homeRef = useRef(null)
-  const aboutRef = useRef(null)
-  const contactRef = useRef(null)
-  const socialRef = useRef(null)
+  const mainRef = useRef<HTMLDivElement | null>(null)
+  const homeRef = useRef<HTMLDivElement>(null)
+  const aboutRef = useRef<HTMLDivElement>(null)
+  const contactRef = useRef<HTMLDivElement>(null)
+  const socialRef = useRef<HTMLDivElement>(null)
 
   return (
-    <div className="overflow-hidden">
+    <main className="overflow-hidden" ref={mainRef}>
+      <ProgressBar target={mainRef} />
       <LogoNavbar
         homeRef={homeRef}
         aboutRef={aboutRef}
@@ -30,7 +33,7 @@ const App: React.FC = () => {
         <ContactSection ref={contactRef} />
         <SocialSection ref={socialRef} />
       </div>
-    </div>
+    </main>
   )
 }
 
