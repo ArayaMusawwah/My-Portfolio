@@ -8,6 +8,9 @@ export default {
     extend: {
       animation: {
         gradiate: "animatedgradient 3s ease alternate infinite"
+      },
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"]
       }
     }
   },

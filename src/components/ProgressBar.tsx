@@ -16,7 +16,7 @@ const ProgressBar = ({ target }: { target: React.RefObject<HTMLElement> }) => {
     if (windowScrollTop === 0) return setReadingProgress(0)
     if (windowScrollTop > totalHeight) return setReadingProgress(100)
 
-    setReadingProgress((windowScrollTop / totalHeight) * 100)
+    setReadingProgress(Math.round((windowScrollTop / totalHeight) * 100))
   }, [target])
 
   useEffect(() => {
@@ -25,10 +25,10 @@ const ProgressBar = ({ target }: { target: React.RefObject<HTMLElement> }) => {
   }, [scrollListener])
 
   return (
-    <div className="fixed inset-y-0 left-0 z-50 w-full">
+    <div className="fixed inset-x-0 bottom-0 z-50 w-full">
       <div
-        className="w-[2px] bg-gradient-to-r from-pink-500 to-cyan-500 transition-all duration-100"
-        style={{ height: `${readingProgress}%` }}
+        className="h-[2px] bg-gradient-to-r from-pink-500 to-cyan-500 transition-all duration-[100ms] ease-in-out"
+        style={{ width: `${readingProgress}%` }}
       />
     </div>
   )

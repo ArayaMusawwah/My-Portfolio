@@ -1,21 +1,19 @@
-import { forwardRef, useEffect } from "react"
+import { forwardRef } from "react"
 import MainLayout from "../layouts/MainLayout"
-import AOS from "aos"
+import AboutPart from "../components/about/AboutPart"
+import SkillPart from "../components/about/SkillPart"
 
 const AboutSection = forwardRef<HTMLDivElement>((props, ref) => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 })
-  }, [])
   return (
     <MainLayout
-      imageClass="bg-[url('/4.jpg')]"
-      center={true}
+      imageClass="bg-[url('/2.jpg')]"
+      center={false}
+      className="grid w-full items-center gap-8 p-10 md:grid-cols-2 "
       ref={ref}
       {...props}
     >
-      <h1 className="text-5xl font-bold" data-aos="fade-up">
-        about
-      </h1>
+      <AboutPart />
+      <SkillPart />
     </MainLayout>
   )
 })

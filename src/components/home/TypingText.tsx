@@ -20,7 +20,7 @@ const TypingText: React.FC = () => {
           0
         ]}
         repeat={Infinity}
-        className="mt-4 block w-fit bg-gradient-to-tr from-[#bc5f5c] from-20% to-[#7756fc] to-80% bg-clip-text text-6xl font-bold text-transparent "
+        className="mt-4 block w-fit bg-gradient-to-br from-[#bc5f5c] from-40% via-[#ba56fc] to-[#7756fc] bg-clip-text text-6xl font-bold text-transparent "
       />
       <TypeAnimation
         sequence={[

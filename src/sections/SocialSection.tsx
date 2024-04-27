@@ -9,7 +9,7 @@ const SocialSection = forwardRef<HTMLDivElement>((props, ref) => {
 
   return (
     <MainLayout
-      imageClass="bg-[url('/2.jpg')]"
+      imageClass="bg-[url('/4.jpg')]"
       center={true}
       {...props}
       ref={ref}
