@@ -31,15 +31,13 @@ const SkillPart: React.FC = () => {
     { logo: MongoDbLogo, alt: "MongoDB" },
     { logo: MySqlLogo, alt: "MySQL" },
     { logo: GitLogo, alt: "Git" },
-    { logo: DockerLogo, alt: "Docker" },
-    { logo: LogoSkills, alt: "Other" }
+    { logo: DockerLogo, alt: "Docker" }
   ]
 
   const divVariants = {
     initial: { x: "100%", opacity: 0 },
     animate: { x: "0%", opacity: 1 }
   }
-
   const liVariant = {
     initial: { y: "100%", opacity: 0 },
     animate: (index: number) => ({
@@ -51,18 +49,17 @@ const SkillPart: React.FC = () => {
 
   return (
     <motion.div
-      className="w-full justify-self-end px-4"
       variants={divVariants}
       transition={{ duration: 1 }}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
+      className="w-full justify-self-end px-4"
     >
-      <div className="mockup-window relative flex border border-white bg-base-300">
-        <h2 className="absolute left-1/2 top-4 -translate-x-1/2 font-mono">
-          Skills and Tools
-        </h2>
-
+      <div className="mockup-browser border bg-base-300">
+        <div className="mockup-browser-toolbar">
+          <div className="input">https://arayamusawwah.com/skills+tools</div>
+        </div>
         <ul className="flex flex-wrap justify-center gap-2 bg-gray-200 px-4 py-16">
           {logos.map((logo, index) => (
             <motion.li

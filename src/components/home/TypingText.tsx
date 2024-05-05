@@ -4,12 +4,10 @@ import { TypeAnimation } from "react-type-animation"
 const TypingText: React.FC = () => {
   return (
     <div>
-      <TypeAnimation
-        sequence={["Oh Hi! It's,", 1000]}
-        repeat={Infinity}
-        className="block w-fit bg-gradient-to-r from-[#fffcdc] to-[#d9a7c7] bg-clip-text text-5xl font-bold text-transparent"
-        cursor={false}
-      />
+      <p className="block w-fit bg-gradient-to-r from-[#fffcdc] to-[#d9a7c7] bg-clip-text text-5xl font-bold text-transparent">
+        OH Hi, It's
+      </p>
+
       <TypeAnimation
         sequence={[
           "Muhammad Iqbal Ramadhan",

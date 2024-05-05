@@ -1,14 +1,10 @@
-import { forwardRef, useEffect } from "react"
+import { forwardRef } from "react"
 import MainLayout from "../layouts/MainLayout"
-import AOS from "aos"
+
 import TimelineStart from "../components/social/TimelineStart"
 import TimelineEnd from "../components/social/TimelineEnd"
 
 const SocialSection = forwardRef<HTMLDivElement>((props, ref) => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 })
-  }, [])
-
   return (
     <MainLayout
       imageClass="bg-[url('/4.jpg')]"
