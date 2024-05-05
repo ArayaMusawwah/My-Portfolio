@@ -12,7 +12,7 @@ const HomeSection = forwardRef<HTMLDivElement>((props, ref) => {
     <MainLayout
       ref={ref}
       imageClass={`bg-[url('/1.jpg')] bg-cover bg-center bg-no-repeat`}
-      className="font-roboto flex-col items-center justify-between md:flex-row"
+      className="flex-col items-center justify-between px-[7%] font-roboto md:flex-row"
       {...props}
     >
       <TypingText />

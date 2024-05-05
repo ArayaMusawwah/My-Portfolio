@@ -1,6 +1,8 @@
 import { forwardRef, useEffect } from "react"
 import MainLayout from "../layouts/MainLayout"
 import AOS from "aos"
+import TimelineStart from "../components/social/TimelineStart"
+import TimelineEnd from "../components/social/TimelineEnd"
 
 const SocialSection = forwardRef<HTMLDivElement>((props, ref) => {
   useEffect(() => {
@@ -14,9 +16,19 @@ const SocialSection = forwardRef<HTMLDivElement>((props, ref) => {
       {...props}
       ref={ref}
     >
-      <h1 className="text-5xl font-bold" data-aos="fade-up">
-        Social
-      </h1>
+      <ul className="timeline">
+        <TimelineStart title="makan" />
+        <TimelineEnd title="minum" />
+        <TimelineStart title="makan" />
+
+        <TimelineEnd title="minum" />
+        <TimelineStart title="makan" />
+
+        <TimelineEnd title="minum" />
+        <TimelineStart title="makan" />
+
+        <TimelineEnd title="minum" />
+      </ul>
     </MainLayout>
   )
 })

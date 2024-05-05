@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import HtmlLogo from "../../assets/html.svg"
 import CssLogo from "../../assets/css.svg"
 import JsLogo from "../../assets/javascript.svg"
@@ -13,134 +13,77 @@ import MongoDbLogo from "../../assets/mongodb.svg"
 import MySqlLogo from "../../assets/mysql.svg"
 import GitLogo from "../../assets/git.svg"
 import DockerLogo from "../../assets/docker.svg"
-import AOS from "aos"
 import LogoSkills from "../utils/LogoSkills"
+import { motion } from "framer-motion"
 
 const SkillPart: React.FC = () => {
-  useEffect(() => {
-    AOS.init({ duration: 500 })
-  }, [])
+  const logos = [
+    { logo: HtmlLogo, alt: "HTML" },
+    { logo: CssLogo, alt: "CSS" },
+    { logo: JsLogo, alt: "JavaScript" },
+    { logo: TsLogo, alt: "TypeScript" },
+    { logo: NodeLogo, alt: "Node.js" },
+    { logo: TailwindLogo, alt: "Tailwind" },
+    { logo: ExpressLogo, alt: "Express.js" },
+    { logo: NextjsLogo, alt: "Next.js" },
+    { logo: ReactLogo, alt: "React" },
+    { logo: VueLogo, alt: "Vue.js" },
+    { logo: MongoDbLogo, alt: "MongoDB" },
+    { logo: MySqlLogo, alt: "MySQL" },
+    { logo: GitLogo, alt: "Git" },
+    { logo: DockerLogo, alt: "Docker" },
+    { logo: LogoSkills, alt: "Other" }
+  ]
+
+  const divVariants = {
+    initial: { x: "100%", opacity: 0 },
+    animate: { x: "0%", opacity: 1 }
+  }
+
+  const liVariant = {
+    initial: { y: "100%", opacity: 0 },
+    animate: (index: number) => ({
+      y: "0%",
+      opacity: 1,
+      transition: { delay: 0.05 * index, duration: 0.5, when: "beforeChildren" }
+    })
+  }
+
   return (
-    <div data-aos="fade-left" className="w-full justify-self-end px-4">
+    <motion.div
+      className="w-full justify-self-end px-4"
+      variants={divVariants}
+      transition={{ duration: 1 }}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+    >
       <div className="mockup-window relative flex border border-white bg-base-300">
         <h2 className="absolute left-1/2 top-4 -translate-x-1/2 font-mono">
           Skills and Tools
         </h2>
-        <div className="flex flex-wrap justify-center gap-2 bg-slate-200 px-4 py-16">
-          <div
-            data-aos="fade-left"
-            data-aos-delay="100"
-            className="group relative inline"
-          >
-            <LogoSkills logo={HtmlLogo} alt="HTML5" />
-          </div>
 
-          <div
-            data-aos="fade-left"
-            data-aos-delay="200"
-            className="group relative inline "
-          >
-            <LogoSkills logo={CssLogo} alt="CSS" />
-          </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-delay="300"
-            className="group relative inline"
-          >
-            <LogoSkills logo={JsLogo} alt="JavaScript" />
-          </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-delay="400"
-            className="group relative inline"
-          >
-            <LogoSkills logo={TsLogo} alt="TypeScript" />
-          </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-delay="500"
-            className="group relative inline"
-          >
-            <LogoSkills logo={NodeLogo} alt="Node.js" />
-          </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-delay="600"
-            className="group relative inline"
-          >
-            <LogoSkills logo={TailwindLogo} alt="TailwindCSS" />
-          </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-delay="700"
-            className="group relative inline"
-          >
-            <LogoSkills logo={ExpressLogo} alt="Express.js" />
-          </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-delay="800"
-            className="group relative inline"
-          >
-            <LogoSkills logo={NextjsLogo} alt="Next.js" />
-          </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-delay="1000"
-            className="group relative inline"
-          >
-            <LogoSkills logo={ReactLogo} alt="React" />
-          </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-delay="1100"
-            className="group relative inline"
-          >
-            <LogoSkills logo={VueLogo} alt="Vue.js" />
-          </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-delay="1200"
-            className="group relative inline"
-          >
-            <LogoSkills logo={MongoDbLogo} alt="MongoDB" />
-          </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-delay="1300"
-            className="group relative inline"
-          >
-            <LogoSkills logo={MySqlLogo} alt="MySQL" />
-          </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-delay="1400"
-            className="group relative inline"
-          >
-            <LogoSkills logo={GitLogo} alt="Git" />
-          </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-delay="1500"
-            className="group relative inline"
-          >
-            <LogoSkills logo={DockerLogo} alt="Docker" />
-          </div>
-        </div>
+        <ul className="flex flex-wrap justify-center gap-2 bg-gray-200 px-4 py-16">
+          {logos.map((logo, index) => (
+            <motion.li
+              className="group relative"
+              key={index}
+              variants={liVariant}
+              initial="initial"
+              whileInView="animate"
+              custom={index}
+              viewport={{ once: true }}
+            >
+              <LogoSkills
+                key={index}
+                logo={typeof logo.logo === "string" ? logo.logo : ""}
+                alt={logo.alt}
+              />
+            </motion.li>
+          ))}
+        </ul>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

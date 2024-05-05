@@ -18,14 +18,13 @@ const Navigation: React.FC<Props> = ({
   const scrollToRef = (ref: React.RefObject<HTMLElement>) => {
     ref.current?.scrollIntoView({
       behavior: "smooth",
-      block: "end",
-      inline: "start"
+      block: "nearest"
     })
   }
 
   return (
     <ul
-      className={`flex w-full justify-center gap-6 transition-opacity *:text-xl *:font-semibold *:text-white hover:*:text-violet-500 ${!isActive ? "opacity-0" : "opacity-100 delay-700"}`}
+      className={`flex w-full justify-center gap-6 transition-opacity *:text-xl *:font-semibold *:text-white hover:*:text-violet-500 ${!isActive ? "scale-0" : "scale-100 delay-700"}`}
     >
       <li>
         <button onClick={() => scrollToRef(homeRef)}>Home</button>
@@ -36,11 +35,11 @@ const Navigation: React.FC<Props> = ({
       </li>
 
       <li>
-        <button onClick={() => scrollToRef(contactRef)}>Contact</button>
+        <button onClick={() => scrollToRef(socialRef)}>Social</button>
       </li>
 
       <li>
-        <button onClick={() => scrollToRef(socialRef)}>Social</button>
+        <button onClick={() => scrollToRef(contactRef)}>Contact</button>
       </li>
     </ul>
   )
