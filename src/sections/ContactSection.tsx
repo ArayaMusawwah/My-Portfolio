@@ -21,13 +21,27 @@ const ContactSection = forwardRef<HTMLDivElement>((props, ref) => {
     >
       <h1 className="text-5xl font-bold">contact</h1>
       <motion.ul variants={parent} initial="initial" whileInView="animate">
-        <motion.li variants={item}>1</motion.li>
-        <motion.li variants={item}>1</motion.li>
-        <motion.li variants={item}>1</motion.li>
-        <motion.li variants={item}>1</motion.li>
-        <motion.li variants={item}>1</motion.li>
-        <motion.li variants={item}>1</motion.li>
-        <motion.li variants={item}>1</motion.li>
+        <motion.li variants={item} className="text-center text-5xl font-bold">
+          1
+        </motion.li>
+        <motion.li variants={item} className="text-center text-5xl font-bold">
+          1
+        </motion.li>
+        <motion.li variants={item} className="text-center text-5xl font-bold">
+          1
+        </motion.li>
+        <motion.li variants={item} className="text-center text-5xl font-bold">
+          1
+        </motion.li>
+        <motion.li variants={item} className="text-center text-5xl font-bold">
+          1
+        </motion.li>
+        <motion.li variants={item} className="text-center text-5xl font-bold">
+          1
+        </motion.li>
+        <motion.li variants={item} className="text-center text-5xl font-bold">
+          1
+        </motion.li>
       </motion.ul>
     </MainLayout>
   )

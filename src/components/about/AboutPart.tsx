@@ -22,12 +22,12 @@ const AboutPart: React.FC = () => {
     >
       <div className="camera"></div>
       <div className="display">
-        <div className="artboard artboard-demo phone-1 relative bg-gray-200 font-mono text-base-200">
+        <div className="artboard artboard-demo phone-1 relative bg-zinc-900 font-mono text-slate-200">
           <div className="absolute top-14 flex w-max items-center justify-center gap-4">
-            <img src={LogoImage} alt="Arμ's logo" className="size-20 invert " />
+            <img src={LogoImage} alt="Arμ's logo" className="size-20 " />
             <h2 className="mt-8 text-xl font-bold">Arμ's Corp &copy;</h2>
           </div>
-          <div className="prose mt-32 px-8 font-mono text-base-200">
+          <div className="prose mt-32 px-8 font-mono text-slate-200">
             <TypeAnimation
               sequence={[
                 `Arμ's Corp &copy; is a company founded by Arμ. Arμ's Corp. is a company founded by Araya Musawwah | Muhammad Iqbal Ramadhan. \n\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, esse odit, alias magnam facere molestiae labore consectetur ut.`,

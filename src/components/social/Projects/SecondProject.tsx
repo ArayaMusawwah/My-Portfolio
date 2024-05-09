@@ -1,9 +1,10 @@
 import React from "react"
+import ImageProject from "./ImageProject"
 
-const TimelineEnd: React.FC<{ title: string }> = ({ title }) => {
+const SecondProject: React.FC = () => {
   return (
     <li>
-      <hr />
+      <hr className="bg-white" />
       <div className="timeline-middle">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -18,9 +19,14 @@ const TimelineEnd: React.FC<{ title: string }> = ({ title }) => {
           />
         </svg>
       </div>
-      <div className="timeline-end timeline-box">{title}</div>
+      <ImageProject
+        imagePath="/project2.png"
+        title="Movie Database WebApp"
+        isInStart={false}
+      />
+      <hr className="bg-white" />
     </li>
   )
 }
 
-export default TimelineEnd
+export default SecondProject

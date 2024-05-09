@@ -28,6 +28,10 @@ const App: React.FC = () => {
       <div
         className={`transition-all duration-700 ease-in-out ${window.scrollY > 0 && isActive ? "origin-center scale-105 blur-md" : "scale-100"}`}
       >
+        {/* TODO:
+            1. Enhance Text style
+         */}
+
         <HomeSection ref={homeRef} />
         <AboutSection ref={aboutRef} />
         <SocialSection ref={socialRef} />

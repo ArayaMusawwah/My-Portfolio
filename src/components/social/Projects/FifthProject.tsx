@@ -1,13 +1,15 @@
 import React from "react"
+import ImageProject from "./ImageProject"
 
-interface Props {
-  title: string
-}
-
-const TimelineStart: React.FC<Props> = ({ title }) => {
+const FifthProject: React.FC = () => {
   return (
     <li>
-      <div className="timeline-start timeline-box">{title}</div>
+      <hr className="bg-white" />
+      <ImageProject
+        imagePath="/project5.png"
+        title="Draggable Todo WebApp"
+        isInStart={true}
+      />
       <div className="timeline-middle">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -22,9 +24,8 @@ const TimelineStart: React.FC<Props> = ({ title }) => {
           />
         </svg>
       </div>
-      <hr />
     </li>
   )
 }
 
-export default TimelineStart
+export default FifthProject

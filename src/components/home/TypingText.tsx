@@ -1,10 +1,14 @@
 import React from "react"
 import { TypeAnimation } from "react-type-animation"
-
+import { motion } from "framer-motion"
 const TypingText: React.FC = () => {
   return (
-    <div>
-      <p className="block w-fit bg-gradient-to-r from-[#fffcdc] to-[#d9a7c7] bg-clip-text text-5xl font-bold text-transparent">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, staggerChildren: 0.5 }}
+    >
+      <p className="animate-spin2 block w-fit bg-gradient-to-r from-[#fffcdc] via-purple-300 to-[#b86499] bg-clip-text text-5xl font-bold text-transparent [background-size:300%_300%]">
         OH Hi, It's
       </p>
 
@@ -37,7 +41,7 @@ const TypingText: React.FC = () => {
         repeat={Infinity}
         className="bold mt-2 block text-xl text-slate-200"
       />
-    </div>
+    </motion.div>
   )
 }
 
