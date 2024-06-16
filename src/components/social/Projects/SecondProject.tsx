@@ -19,11 +19,7 @@ const SecondProject: React.FC = () => {
           />
         </svg>
       </div>
-      <ImageProject
-        imagePath="/project2.png"
-        title="Movie Database WebApp"
-        isInStart={false}
-      />
+      <ImageProject imagePath="/project2.png" title="Movie Database WebApp" />
       <hr className="bg-white" />
     </li>
   )

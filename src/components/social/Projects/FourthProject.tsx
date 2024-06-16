@@ -19,11 +19,7 @@ const FourthProject: React.FC = () => {
           />
         </svg>
       </div>
-      <ImageProject
-        imagePath="/project3.png"
-        title="Draggable Todo WebApp"
-        isInStart={false}
-      />
+      <ImageProject imagePath="/project3.png" title="Draggable Todo WebApp" />
       <hr className="bg-white" />
     </li>
   )

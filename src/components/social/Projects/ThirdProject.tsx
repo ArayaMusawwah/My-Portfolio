@@ -5,11 +5,7 @@ const ThirdProject: React.FC = () => {
   return (
     <li>
       <hr className="bg-white" />
-      <ImageProject
-        imagePath="/project4.png"
-        title="Draggable Todo WebApp"
-        isInStart={true}
-      />
+      <ImageProject imagePath="/project4.png" title="Draggable Todo WebApp" />
       <div className="timeline-middle">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -4,7 +4,22 @@
 
 @layer base {
   html {
-    @apply text-[14px] md:text-[16px];
+    scroll-snap-type: y mandatory !important;
+    scroll-behavior: smooth !important;
+  }
+
+  section {
+    scroll-snap-align: center !important;
+  }
+
+  .no-visible-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .no-visible-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }
 

@@ -1,7 +1,7 @@
 import React from "react"
 import LogoSkills from "../utils/LogoSkills"
 import { motion } from "framer-motion"
-import { logos } from "@/data/datum"
+import { logos } from "@/data/generalTypes"
 
 const SkillPart: React.FC = () => {
   const divVariants = {
@@ -26,7 +26,7 @@ const SkillPart: React.FC = () => {
       viewport={{ once: true }}
       className="w-full justify-self-end px-4"
     >
-      <div className="mockup-browser bg-base-300 border">
+      <div className="mockup-browser border bg-base-300">
         <div className="mockup-browser-toolbar">
           <div className="input">https://arayamusawwah.com/skills+tools</div>
         </div>

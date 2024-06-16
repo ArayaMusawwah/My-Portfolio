@@ -1,20 +1,122 @@
-import React from "react"
-import FirstProject from "./FirstProject"
-import SecondProject from "./SecondProject"
-import ThirdProject from "./ThirdProject"
-import FourthProject from "./FourthProject"
-import FifthProject from "./FifthProject"
+import { Tabs } from "@/components/ui/Tabs"
+import { FaArrowUpRightFromSquare } from "react-icons/fa6"
 
-const Projects: React.FC = () => {
+export default function Projects() {
+  const tabs = [
+    {
+      title: "Project#1",
+      value: "project1",
+      image: "/project4.png",
+      content: (
+        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-sky-400/[0.1] px-10 pb-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
+          <div className="flex justify-between">
+            <p className="[text-shadow:0_0_5px_rgb(0,0,0)]">
+              Simple Portfolio Website
+            </p>
+            <a
+              href="https://arayamusawwah.github.io/portfolio-tailwind/"
+              target="_blank"
+              className="hover:text-purple-500"
+            >
+              <FaArrowUpRightFromSquare />
+            </a>
+          </div>
+          <Image image={"/project4.png"} alt={"Simple Portfolio Website"} />
+        </div>
+      )
+    },
+    {
+      title: "Project#2",
+      value: "project2",
+      image: "/project5.png",
+      content: (
+        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-sky-400/[0.1] px-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
+          <div className="flex justify-between">
+            <p className="[text-shadow:0_0_5px_rgb(0,0,0)]">
+              Landing Page with Payment Integrated
+            </p>
+            <a
+              href="https://arayamusawwah.github.io/Jo-s-Dream-Coffee-/"
+              className="hover:text-purple-500"
+            >
+              <FaArrowUpRightFromSquare />
+            </a>
+          </div>
+          <Image
+            image={"/project5.png"}
+            alt={"Landing Page with Payment Integrated"}
+          />
+        </div>
+      )
+    },
+    {
+      title: "Project#3",
+      value: "project3",
+      content: (
+        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-sky-400/[0.1] px-10 pb-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
+          <div className="flex justify-between">
+            <p className="[text-shadow:0_0_5px_rgb(0,0,0)]">
+              Database Integrated WebApp
+            </p>
+            <a href="" className="hover:cursor-not-allowed">
+              <FaArrowUpRightFromSquare />
+            </a>
+          </div>
+          <Image image={"/project1.png"} alt={"Database Integrated WebApp"} />
+        </div>
+      )
+    },
+    {
+      title: "Project#4",
+      value: "project4",
+      image: "/project2.png",
+      content: (
+        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-sky-400/[0.1] px-10 pb-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
+          <div className="flex justify-between">
+            <p className="[text-shadow:0_0_5px_rgb(0,0,0)]">
+              Movie Database WebApp
+            </p>
+            <a href="" className="hover:cursor-not-allowed">
+              <FaArrowUpRightFromSquare />
+            </a>
+          </div>
+          <Image image={"/project2.png"} alt={"Movie Database WebApp"} />
+        </div>
+      )
+    },
+    {
+      title: "Project#5",
+      value: "project5",
+      image: "/project3.png",
+      content: (
+        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-sky-400/[0.1] px-10 pb-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
+          <div className="flex justify-between">
+            <p className="[text-shadow:0_0_5px_rgb(0,0,0)]">
+              Draggable Todo WebApp
+            </p>
+            <a href="" className="hover:cursor-not-allowed">
+              <FaArrowUpRightFromSquare />
+            </a>
+          </div>
+          <Image image={"/project3.png"} alt={"Draggable Todo WebApp"} />
+        </div>
+      )
+    }
+  ]
+
   return (
-    <ul className="timeline p-10">
-      <FirstProject />
-      <SecondProject />
-      <ThirdProject />
-      <FourthProject />
-      <FifthProject />
-    </ul>
+    <div className="relative mx-auto mb-40 flex h-[20rem] w-full max-w-5xl items-start justify-start gap-8 [perspective:1000px] md:h-[40rem]">
+      <Tabs tabs={tabs} />
+    </div>
   )
 }
 
-export default Projects
+const Image = ({ image, alt }: { image: string; alt: string }) => {
+  return (
+    <img
+      src={image}
+      alt={alt}
+      className="absolute inset-x-0 -bottom-10  mx-auto h-[60%] w-[90%] rounded-xl object-cover object-left md:h-[90%]"
+    />
+  )
+}

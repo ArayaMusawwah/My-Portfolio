@@ -7,7 +7,6 @@ const FirstProject: React.FC = () => {
       <ImageProject
         imagePath="/project1.png"
         title="Database Integrated WebApp"
-        isInStart={true}
       />
       <div className="timeline-middle">
         <svg

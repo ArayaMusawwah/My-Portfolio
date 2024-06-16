@@ -5,7 +5,7 @@ interface Props {
   homeRef: React.RefObject<HTMLElement>
   aboutRef: React.RefObject<HTMLElement>
   contactRef: React.RefObject<HTMLElement>
-  socialRef: React.RefObject<HTMLElement>
+  projectRef: React.RefObject<HTMLElement>
 }
 
 const Navigation: React.FC<Props> = ({
@@ -13,7 +13,7 @@ const Navigation: React.FC<Props> = ({
   homeRef,
   aboutRef,
   contactRef,
-  socialRef
+  projectRef
 }) => {
   const scrollToRef = (ref: React.RefObject<HTMLElement>) => {
     ref.current?.scrollIntoView({
@@ -35,7 +35,7 @@ const Navigation: React.FC<Props> = ({
       </li>
 
       <li>
-        <button onClick={() => scrollToRef(socialRef)}>Social</button>
+        <button onClick={() => scrollToRef(projectRef)}>Projects</button>
       </li>
 
       <li>

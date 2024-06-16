@@ -8,14 +8,14 @@ interface Props {
   homeRef: React.RefObject<HTMLElement>
   aboutRef: React.RefObject<HTMLElement>
   contactRef: React.RefObject<HTMLElement>
-  socialRef: React.RefObject<HTMLElement>
+  projectRef: React.RefObject<HTMLElement>
 }
 
 const LogoNavbar: React.FC<Props> = ({
   homeRef,
   aboutRef,
   contactRef,
-  socialRef
+  projectRef
 }) => {
   const { isActive, setIsActive } = useContext(ActiveContext)
 
@@ -50,14 +50,14 @@ const LogoNavbar: React.FC<Props> = ({
       />
 
       <div
-        className={`absolute flex items-center justify-center  space-y-2 rounded-md border border-white bg-white/10 backdrop-blur-sm transition-all duration-[600ms] ease-[cubic-bezier(0.380,0.365,0.025,0.785)] ${isActive ? "mt-48 h-[4.5rem] w-[26rem]" : "h-[6.5rem] w-[6.5rem]"}`}
+        className={`duration-[600ms] ease-[cubic-bezier(0.380,0.365,0.025,0.785)] absolute flex  items-center justify-center space-y-2 rounded-md border border-white bg-white/10 backdrop-blur-sm transition-all ${isActive ? "mt-48 h-[4.5rem] w-[26rem]" : "h-[6.5rem] w-[6.5rem]"}`}
       >
         <Navigation
           isActive={isActive}
           homeRef={homeRef}
           aboutRef={aboutRef}
           contactRef={contactRef}
-          socialRef={socialRef}
+          projectRef={projectRef}
         />
         <NavbarButton isActive={isActive} setIsActive={setIsActive} />
       </div>

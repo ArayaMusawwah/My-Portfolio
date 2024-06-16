@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/carousel"
 import React from "react"
 import ImageProject from "../Projects/ImageProject"
-import { projects } from "@/data/datum"
+import { projects } from "@/data/generalTypes"
 import { motion } from "framer-motion"
 const ProjectsCarousel: React.FC = () => {
   return (
@@ -15,6 +15,7 @@ const ProjectsCarousel: React.FC = () => {
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
+      viewport={{ once: true }}
     >
       <Carousel className="w-full max-w-7xl" opts={{ loop: true }}>
         <CarouselContent>
