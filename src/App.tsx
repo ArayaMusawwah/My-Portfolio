@@ -26,7 +26,7 @@ const App: React.FC = () => {
         projectRef={projectRef}
       />
       <div
-        className={`overflow-auto transition-all duration-700 ease-in-out ${window.scrollY > 0 && isActive ? "origin-center scale-105 blur-md" : "scale-100"}`}
+        className={`overflow-auto transition-all duration-700 ease-in-out ${window.scrollY > 0 && isActive ? "origin-center scale-105 blur-md backdrop-filter" : "scale-100"}`}
       >
         {/* TODO:
             1. Enhance Text style

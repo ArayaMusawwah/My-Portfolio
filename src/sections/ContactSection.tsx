@@ -1,6 +1,5 @@
 import { forwardRef } from "react"
 import MainLayout from "../layouts/MainLayout"
-import { motion } from "framer-motion"
 
 const ContactSection = forwardRef<HTMLDivElement>((props, ref) => {
   const item = {
@@ -20,29 +19,6 @@ const ContactSection = forwardRef<HTMLDivElement>((props, ref) => {
       {...props}
     >
       <h1 className="text-5xl font-bold">contact</h1>
-      <motion.ul variants={parent} initial="initial" whileInView="animate">
-        <motion.li variants={item} className="text-center text-5xl font-bold">
-          1
-        </motion.li>
-        <motion.li variants={item} className="text-center text-5xl font-bold">
-          1
-        </motion.li>
-        <motion.li variants={item} className="text-center text-5xl font-bold">
-          1
-        </motion.li>
-        <motion.li variants={item} className="text-center text-5xl font-bold">
-          1
-        </motion.li>
-        <motion.li variants={item} className="text-center text-5xl font-bold">
-          1
-        </motion.li>
-        <motion.li variants={item} className="text-center text-5xl font-bold">
-          1
-        </motion.li>
-        <motion.li variants={item} className="text-center text-5xl font-bold">
-          1
-        </motion.li>
-      </motion.ul>
     </MainLayout>
   )
 })

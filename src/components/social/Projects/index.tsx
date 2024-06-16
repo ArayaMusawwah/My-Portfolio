@@ -8,7 +8,7 @@ export default function Projects() {
       value: "project1",
       image: "/project4.png",
       content: (
-        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-sky-400/[0.1] px-10 pb-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
+        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-blue-300/[0.2] px-10 pb-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
           <div className="flex justify-between">
             <p className="[text-shadow:0_0_5px_rgb(0,0,0)]">
               Simple Portfolio Website
@@ -30,7 +30,7 @@ export default function Projects() {
       value: "project2",
       image: "/project5.png",
       content: (
-        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-sky-400/[0.1] px-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
+        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-blue-300/[0.2] px-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
           <div className="flex justify-between">
             <p className="[text-shadow:0_0_5px_rgb(0,0,0)]">
               Landing Page with Payment Integrated
@@ -53,7 +53,7 @@ export default function Projects() {
       title: "Project#3",
       value: "project3",
       content: (
-        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-sky-400/[0.1] px-10 pb-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
+        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-blue-300/[0.2] px-10 pb-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
           <div className="flex justify-between">
             <p className="[text-shadow:0_0_5px_rgb(0,0,0)]">
               Database Integrated WebApp
@@ -71,7 +71,7 @@ export default function Projects() {
       value: "project4",
       image: "/project2.png",
       content: (
-        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-sky-400/[0.1] px-10 pb-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
+        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-blue-300/[0.2] px-10 pb-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
           <div className="flex justify-between">
             <p className="[text-shadow:0_0_5px_rgb(0,0,0)]">
               Movie Database WebApp
@@ -89,7 +89,7 @@ export default function Projects() {
       value: "project5",
       image: "/project3.png",
       content: (
-        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-sky-400/[0.1] px-10 pb-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
+        <div className="relative h-full w-full overflow-hidden rounded-2xl  bg-blue-300/[0.2] px-10 pb-10 pt-4 text-xl font-bold text-white backdrop-blur-md backdrop-filter md:text-3xl">
           <div className="flex justify-between">
             <p className="[text-shadow:0_0_5px_rgb(0,0,0)]">
               Draggable Todo WebApp

@@ -2,6 +2,10 @@
 import tailwindcssAnimate from "tailwindcss-animate"
 import daisyui from "daisyui"
 import tailwindTypography from "@tailwindcss/typography"
+import defaultTheme from "tailwindcss/defaultTheme"
+import colors from "tailwindcss/colors"
+import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette"
+
 export default {
   darkMode: ["class"],
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -37,5 +41,21 @@ export default {
       }
     }
   },
-  plugins: [daisyui, tailwindTypography, tailwindcssAnimate]
+  plugins: [
+    daisyui,
+    tailwindTypography,
+    tailwindcssAnimate,
+    addVariablesForColors
+  ]
+}
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"))
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  )
+
+  addBase({
+    ":root": newVars
+  })
 }
