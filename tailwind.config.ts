@@ -27,13 +27,19 @@ export default {
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" }
+        },
+        floating: {
+          "0%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
+          "100%": { transform: "translateY(0)" }
         }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         gradiate: "animatedgradient 3s ease alternate infinite",
-        spin2: "backgroundSpin 3s linear infinite"
+        spin2: "backgroundSpin 3s linear infinite",
+        floating: "floating 3s ease-in-out infinite"
       },
 
       fontFamily: {
@@ -50,8 +56,8 @@ export default {
 }
 
 function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"))
-  let newVars = Object.fromEntries(
+  const allColors = flattenColorPalette(theme("colors"))
+  const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   )
 
