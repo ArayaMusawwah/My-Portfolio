@@ -30,7 +30,7 @@ const App: React.FC = () => {
         className={`origin-center overflow-auto transition-all duration-700 ease-in-out`}
       >
         <HomeSection ref={homeRef} />
-        {/* <AboutSection ref={aboutRef} /> */}
+        <AboutSection ref={aboutRef} />
         {/* <ProjectsSection ref={projectRef} /> */}
         {/* <ContactSection ref={contactRef} /> */}
       </div>

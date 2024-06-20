@@ -8,7 +8,7 @@ const AboutSection = forwardRef<HTMLDivElement>((props, ref) => {
     <MainLayout
       imageClass="bg-[url('/2.jpg')]"
       center={false}
-      className="grid w-full items-center gap-8 px-10 py-10 md:grid-cols-2"
+      className="flex w-full items-center px-10 py-10 max-sm:flex-col max-sm:gap-8 sm:grid sm:grid-cols-2"
       ref={ref}
       {...props}
     >

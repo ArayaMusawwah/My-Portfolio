@@ -38,7 +38,7 @@ const AboutPart: React.FC = () => {
               <div className="prose mt-32 px-8 font-mono text-slate-200">
                 <TypeAnimation
                   sequence={[
-                    `Arμ's Corp &copy; is a company founded by Arμ. Arμ's Corp. is a company founded by Araya Musawwah | Muhammad Iqbal Ramadhan. \n\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, esse odit, alias magnam facere molestiae labore consectetur ut.`,
+                    `Arμ's Corp &copy; is a company founded by Arμ. Arμ's Corp. is a company founded by Araya Musawwah | Muhammad Iqbal Ramadhan. \n\nFugiat amet do do et non deserunt dolor ullamco id labore deserunt cupidatat amet adipisicing. Laborum consequat occaecat laboris minim aliqua id adipisicing consequat ad dolor ad aute qui.`,
                     1000
                   ]}
                   speed={80}
