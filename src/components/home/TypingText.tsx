@@ -21,12 +21,13 @@ const TypingText: React.FC = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
+      className="absolute top-[24%] min-w-full px-4 sm:static sm:min-w-0 sm:px-0"
     >
       <motion.p
-        className="block w-fit animate-spin2 bg-gradient-to-r from-[#fffcdc] via-purple-300 to-[#b86499] bg-clip-text text-5xl font-bold text-transparent [background-size:300%_300%]"
+        className="block w-full animate-spin2 bg-gradient-to-r from-[#fffcdc] via-purple-300 to-[#b86499] bg-clip-text text-center text-2xl font-bold text-transparent [background-size:300%_300%] sm:text-left sm:text-3xl"
         variants={childVariant}
       >
-        OH Hi, It's
+        Oh Hi, It's
       </motion.p>
 
       <motion.div variants={childVariant}>
@@ -40,7 +41,7 @@ const TypingText: React.FC = () => {
             0
           ]}
           repeat={Infinity}
-          className="mt-4 block w-full bg-gradient-to-r from-[#bc5f5c] via-[#ba56fc] to-[#565bfc] bg-clip-text text-6xl font-bold text-transparent "
+          className="mt-4 block w-full bg-gradient-to-r from-[#bc5f5c] via-[#ba56fc] to-[#565bfc] bg-clip-text text-4xl font-bold text-transparent max-sm:text-center sm:text-6xl"
         />
       </motion.div>
 
@@ -59,7 +60,7 @@ const TypingText: React.FC = () => {
           deletionSpeed={99}
           speed={80}
           repeat={Infinity}
-          className="bold mt-2 block text-xl text-slate-200"
+          className="bold mt-2 block text-lg text-slate-200 max-sm:text-center sm:text-xl"
         />
       </motion.div>
     </motion.div>

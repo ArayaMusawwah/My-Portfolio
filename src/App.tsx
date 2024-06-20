@@ -1,14 +1,15 @@
-import React, { useContext, useRef } from "react"
+import React, { useRef } from "react"
 import HomeSection from "./sections/HomeSection"
 import AboutSection from "./sections/AboutSection"
 import ContactSection from "./sections/ContactSection"
 import LogoNavbar from "./sections/LogoNavbar"
-import { ActiveContext } from "./contexts/ActiveContext"
+// import { ActiveContext } from "./contexts/ActiveContext"
 import AnotherProgressBar from "./components/AnotherProgressBar"
 import ProjectsSection from "./sections/ProjectsSection"
+// import { motion } from "framer-motion"
 
 const App: React.FC = () => {
-  const { isActive } = useContext(ActiveContext)
+  // const { isActive } = useContext(ActiveContext)
 
   const mainRef = useRef<HTMLDivElement | null>(null)
   const homeRef = useRef<HTMLDivElement>(null)
@@ -26,12 +27,8 @@ const App: React.FC = () => {
         projectRef={projectRef}
       />
       <div
-        className={`overflow-auto transition-all duration-700 ease-in-out ${window.scrollY > 0 && isActive ? "origin-center scale-105 blur-md backdrop-filter" : "scale-100"}`}
+        className={`origin-center overflow-auto transition-all duration-700 ease-in-out`}
       >
-        {/* TODO:
-            1. Enhance Text style
-         */}
-
         <HomeSection ref={homeRef} />
         <AboutSection ref={aboutRef} />
         <ProjectsSection ref={projectRef} />

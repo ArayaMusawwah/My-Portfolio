@@ -105,7 +105,7 @@ export default function Projects() {
   ]
 
   return (
-    <div className="relative mx-auto mb-40 flex h-[20rem] w-full max-w-5xl items-start justify-start gap-8 [perspective:1000px] md:h-[40rem]">
+    <div className="relative mx-auto mt-24 flex h-[20rem] w-full max-w-5xl items-start justify-start gap-8 [perspective:1000px] max-sm:flex-col-reverse md:h-[40rem]">
       <Tabs tabs={tabs} />
     </div>
   )
@@ -116,7 +116,7 @@ const Image = ({ image, alt }: { image: string; alt: string }) => {
     <img
       src={image}
       alt={alt}
-      className="absolute inset-x-0 -bottom-10  mx-auto h-[60%] w-[90%] rounded-xl object-cover object-left md:h-[90%]"
+      className="absolute inset-x-0 bottom-0  mx-auto h-[75%] w-[90%] rounded-xl object-cover object-left sm:-bottom-10 md:h-[90%]"
     />
   )
 }

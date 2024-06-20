@@ -13,7 +13,7 @@ const icons = [
 
 const IconContainer = () => {
   return (
-    <div className="flex flex-row gap-10">
+    <div className="flex flex-row gap-2 sm:gap-10">
       {icons.map((icon, index) => (
         <HoverBorderGradient
           containerClassName={`rounded-full border-[2px] border-white/20 animate-floating duration-[10s]`}
@@ -26,7 +26,7 @@ const IconContainer = () => {
             href={icon.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="border-none outline-none *:text-5xl"
+            className="border-none text-3xl outline-none sm:*:text-5xl"
           >
             {icon.icon}
           </a>
