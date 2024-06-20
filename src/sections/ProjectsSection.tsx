@@ -1,30 +1,22 @@
 import { forwardRef } from "react"
 import MainLayout from "../layouts/MainLayout"
-import { motion } from "framer-motion"
 import Projects from "@/components/social/Projects"
+import ProjectTitle from "@/components/social/Projects/ProjectTitle"
 
 const ProjectsSection = forwardRef<HTMLDivElement>((props, ref) => {
   return (
     <MainLayout
       imageClass="bg-[url('/4.jpg')]"
-      className="flex-row-reverse gap-4"
+      className="flex-col gap-4 px-2 sm:flex-row-reverse"
       center={true}
       {...props}
       ref={ref}
     >
-      {/* <motion.h2
-        className="mr-24 text-5xl font-bold uppercase text-slate-200"
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-        viewport={{ once: true }}
-        style={{ writingMode: "vertical-rl" }}
-      >
-        My{" "}
-        <span className="bg-gradient-to-b from-[#bc5f5c] via-[#ba56fc] to-[#565bfc] bg-clip-text text-transparent">
-          Projects
-        </span>
-      </motion.h2> */}
+      <ProjectTitle className="max-sm:hidden" />
+      <ProjectTitle
+        className="mx-auto w-full text-center text-3xl sm:hidden"
+        mobile
+      />
 
       <Projects />
     </MainLayout>
