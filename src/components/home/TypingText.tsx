@@ -21,7 +21,7 @@ const TypingText: React.FC = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="absolute top-[28%] min-w-full px-4 sm:static sm:min-w-0 sm:px-0"
+      className="absolute top-[24%] min-w-full px-4 sm:static sm:min-w-0 sm:px-0"
     >
       <motion.p
         className="block w-full animate-spin2 bg-gradient-to-r from-[#fffcdc] via-purple-300 to-[#b86499] bg-clip-text text-center text-2xl font-bold text-transparent [background-size:300%_300%] sm:text-left sm:text-3xl"

@@ -46,11 +46,11 @@ const LogoNavbar: React.FC<Props> = ({
       <img
         src={Logo}
         alt="logo"
-        className={`size-20 opacity-0 transition ${isActive && "opacity-100"}`}
+        className={`size-16 opacity-0 transition sm:size-20 ${isActive && "opacity-100"}`}
       />
 
       <div
-        className={`duration-[600ms] ease-[cubic-bezier(0.380,0.365,0.025,0.785)] absolute flex  items-center justify-center space-y-2 rounded-md border border-white bg-white/10 backdrop-blur-sm transition-all ${isActive ? "mt-48 h-[4.5rem] w-[26rem]" : "h-[6.5rem] w-[6.5rem]"}`}
+        className={`duration-[600ms] ease-[cubic-bezier(0.380,0.365,0.025,0.785)] absolute flex  items-center justify-center space-y-2 rounded-md border border-white bg-white/10 backdrop-blur-sm transition-all ${isActive ? "mt-48 h-[4rem] w-[20rem] sm:h-[4.5rem] sm:w-[26rem]" : "size-[5.5rem] md:size-[6.5rem]"}`}
       >
         <Navigation
           isActive={isActive}

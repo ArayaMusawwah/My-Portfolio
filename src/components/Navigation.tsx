@@ -24,7 +24,7 @@ const Navigation: React.FC<Props> = ({
 
   return (
     <ul
-      className={`flex w-full justify-center gap-6 transition-opacity *:text-xl *:font-semibold *:text-white hover:*:text-violet-500 ${!isActive ? "scale-0" : "scale-100 delay-700"}`}
+      className={`flex w-full justify-center gap-2 text-lg transition-opacity *:font-semibold  *:text-white hover:*:text-violet-500 sm:gap-6 sm:*:text-xl ${!isActive ? "scale-0" : "scale-100 delay-700"}`}
     >
       <li>
         <button onClick={() => scrollToRef(homeRef)}>Home</button>
