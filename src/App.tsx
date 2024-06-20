@@ -32,7 +32,7 @@ const App: React.FC = () => {
         <HomeSection ref={homeRef} />
         <AboutSection ref={aboutRef} />
         {/* <ProjectsSection ref={projectRef} /> */}
-        {/* <ContactSection ref={contactRef} /> */}
+        <ContactSection ref={contactRef} />
       </div>
     </main>
   )

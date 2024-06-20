@@ -12,8 +12,7 @@ const ProjectsSection = forwardRef<HTMLDivElement>((props, ref) => {
       {...props}
       ref={ref}
     >
-      {/* TODO: 1. Link to porject 2. penjelasan web saat di hover */}
-      <motion.h2
+      {/* <motion.h2
         className="mr-24 text-5xl font-bold uppercase text-slate-200"
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +24,7 @@ const ProjectsSection = forwardRef<HTMLDivElement>((props, ref) => {
         <span className="bg-gradient-to-b from-[#bc5f5c] via-[#ba56fc] to-[#565bfc] bg-clip-text text-transparent">
           Projects
         </span>
-      </motion.h2>
+      </motion.h2> */}
 
       <Projects />
     </MainLayout>

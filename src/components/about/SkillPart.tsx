@@ -37,7 +37,7 @@ const SkillPart: React.FC = () => {
           <div className="mockup-browser-toolbar">
             <div className="input">https://arayamusawwah.com/skills+tools</div>
           </div>
-          <ul className="flex flex-wrap justify-center gap-2 bg-zinc-900 px-4 py-16">
+          <ul className="flex flex-wrap justify-center gap-2 bg-zinc-900 px-4 py-8 sm:py-16">
             {logos.map((logo, index) => (
               <motion.li
                 className="group relative"
