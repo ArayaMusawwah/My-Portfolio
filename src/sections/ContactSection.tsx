@@ -33,7 +33,7 @@ const ContactSection = forwardRef<HTMLDivElement>((props, ref) => {
         <IconContainer />
       </div>
 
-      <footer className="absolute bottom-0 left-0 text-sm font-light text-gray-400">
+      <footer className="absolute bottom-0 right-0 text-sm font-light text-gray-400">
         @2024 Arμ's Corp. &copy; All Right Reserved.
       </footer>
     </MainLayout>
